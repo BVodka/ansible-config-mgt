@@ -1,3 +1,14 @@
-- name: Output This is Apache
-  ansible.builtin.debug:
-    msg: 'This is Apache'
+# tasks file for apacheRole
+---
+- name: Install apache packages
+  become: yes
+  yum:
+    name: httpd
+    state: present
+
+
+- name: ensure httpd is running
+  become: yes
+  service:
+    name: httpd
+    state: started
