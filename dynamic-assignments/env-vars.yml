@@ -7,9 +7,9 @@
       with_first_found:
         - files:
             - dev.yml
-            - staging.yml
-            - prod.yml
             - uat.yml
+            - prod.yml
+            - staging.yml
           paths:
             - "{{ playbook_dir }}/../env-vars"
       tags:
