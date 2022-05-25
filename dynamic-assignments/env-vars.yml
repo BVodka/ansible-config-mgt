@@ -9,7 +9,7 @@
             - dev.yml
             - staging.yml
             - prod.yml
-            - uat.ini
+            - uat.yml
           paths:
             - "{{ playbook_dir }}/../env-vars"
       tags:
